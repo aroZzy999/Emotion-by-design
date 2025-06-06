@@ -1,0 +1,606 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/* Background colour */
+.content {
+    width: 100%;
+    background-color: #FDF1D7;
+    padding-bottom: 100px;
+    /*overflow: hidden;*/
+}
+.box1{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+/* ========== Standard paragraph text styling ========== */
+
+p,h2{
+    font-family: "Inter", sans-serif;
+    color: #2C2C2C;
+}
+.title{
+    font-size: 60px;
+    color: #2C2C2C;
+    font-family: "Inter", sans-serif;
+    /*margin-bottom: 50px;*/
+}
+.box1_des{
+    margin: 50px 0;
+}
+.box2,.box3,.box4,.box8{
+    width: 100%;
+}
+/* ========== Centered content container (max-width: 1200px) ========== */
+.sm_box{
+    width: 1200px;
+    margin: auto;
+}
+.sm_box>p{
+    line-height: 2;
+}
+.line{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 100px 0;
+}
+.line_left,.line_right{
+    width: calc(50% - 300px);
+    height: 10px;
+    background: #EBCFC4;
+}
+.line_center{
+    width: 500px;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+}
+/* Instructional text: small font, placed
+ below paragraph to guide user interaction */
+.sm_text{
+    font-size: 12px;
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 30px;
+    color: #2C2C2C;
+}
+/* Flip card interaction used in emotion explanation.
+   On hover, the card flips to reveal the back side. */
+.card_list{
+    width: 100%;
+    margin-bottom: 50px;
+}
+.card{
+    position: relative;
+    width: 100%;
+    height: 160px;
+    transform-style: preserve-3d;
+    transition: transform 1s ease;
+    background: #fff;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+.card>div{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 24px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    backface-visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    font-size: 15.5px;
+    line-height: 1.75;
+}
+.flip-card-back{
+    background-color: #f2f2f2;
+    transform: rotateY(180deg);
+    padding: 28px 30px;
+    text-align: center;
+}
+.card:hover{
+    transform: rotateY(180deg);
+}
+.card p{
+    font-size: 18px;
+}
+/* Horizontally scrollable card row for emotion-variable mapping.
+   Used to present multiple emotion explanations in a scrollable strip. */
+.box4_card_list{
+    width: 100%;
+    height: 300px;
+    overflow-x: auto;
+}
+.box4_card_list>div{
+    width: 3000px; /* Display 5 cards stitched together side by side */
+
+    height: 100%;
+    display: flex;
+    gap: 20px;
+}
+.box4_card_list>div>div{
+    flex: 1;
+    height: 100%;
+    display: flex;
+    background: #F4F4F4;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+
+.box4_card_left,.box4_card_right{
+    flex: 1;
+    height: 100%;
+}
+.box4_card_left{
+    border-right: 1px solid #CCCCCC;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.box4_card_right{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.box4_card_right > p{
+    margin: 30px 0;
+    line-height: 2;
+}
+.box4_card_left>img{
+    width: 50%;
+}
+.box4_card_left>p{
+    font-size: 12px;
+}
+/* Tag styles (indicating variables linked to emotions) */
+.tags{
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+.tags>span{
+    background: #E0E0E0;
+    font-size: 12px;
+    padding: 5px;
+    display: block;
+}
+.box5_img_con{
+    width: 1200px;
+    margin: 50px auto 0 auto;
+}
+.box5_img{
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+.box5_img>div{
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+}
+.box5_img>div>img{
+    width: 100%;
+}
+/* Image overlay tooltip that slides up on hover.
+   Used to explain image context or add insight without clutter. */
+.box5_mark{
+    background: rgba(0,0,0,0.5);
+    position: absolute;
+    left: 0;
+    top: -100%;
+    width: 100%;
+    height: 100%;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+    padding: 20px;
+}
+.box5_img>div:hover .box5_mark{
+    top: 0;
+}
+.box5_mark p{
+    font-size: 14px;
+    line-height: 2;
+}
+.box5_img_con > p{
+    line-height: 2;
+}
+
+.box5_mark p {
+  color: white;
+}
+
+.swiper {
+    width: 100%;
+    /*height: 100%;*/
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    /* background: #fff; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 45%;
+    object-fit: cover;
+    margin: auto;
+    display: block;
+}
+.char{
+    width: 100%;
+    /*background: white;*/
+    margin: 100px 0;
+    padding: 6vw 100px;
+}
+#canva{
+    width: 100%;
+    height: 60vh;
+}
+
+.line_con{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.line_con>div{
+    width: 500px;
+    padding: 40px;
+    background-color: white;
+    font-family: "Inter", sans-serif;
+    margin: 40px 20px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.line_con>div:hover{
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    transform: translateY(-10px);
+}
+.line_con_title{
+    text-align: center;
+    font-size: 16px
+}
+
+.line_btn1 p,
+.line_btn2 p,
+.line_btn3 p {
+  font-size: 14px;       
+  line-height: 1.6;      
+  margin: 6px 0;         
+  text-align: center;      
+}
+
+.box7{
+    width: 100%;
+}
+.emo_list{
+    width: 100%;
+}
+.emo_con{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.emo_con_img{
+    width: 100px;
+}
+.emo_con_img img{
+    width: 100%;
+}
+.emo_con_right{
+    width: calc(100% - 150px);
+    text-align: center;
+    padding: 20px 0;
+    border-radius: 10px;
+}
+.emo_con_right_1{
+    background: #FEDF85;
+}
+.emo_con_right_2{
+    background: #CEDCE0;
+}
+.emo_con_right>p{
+    font-weight: bold;
+}
+.emo_con_right_3{
+    background: #CCC0B1;
+}
+.emo_con_right_4{
+    background: #C8DDBD;
+}
+.emo_con_right_5{
+    background: #FC9C84;
+}
+.time_emo{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.time_emo>div{
+    width: 200px;
+    height: 100vh;
+    background: rgba(0,0,0,0.1);
+    position: relative;
+}
+.time_center{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: transparent !important;
+}
+.time_center>div{
+    padding: 20px 0;
+    font-family: "Inter", sans-serif;
+}
+.time_center_active{
+    background-color: white;
+}
+.time_tag{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.time_tag>div{
+    width: 200px;
+    background: #D3C4BD;
+    text-align: center;
+    padding: 20px 0;
+    border-radius: 10px;
+}
+.time_tag_center{
+    background-color: white !important;
+}
+.time_emo1,.time_emo2,.time_emo3,.time_emo4{
+    cursor: pointer;
+    position: relative;
+}
+.active_emo{
+    border: 2px solid black;
+}
+.time_emo1_img,.time_emo2_img,.time_emo3_img,.time_emo4_img{
+    width: 100px;
+    position: sticky;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 50%;
+}
+.time_emo3_img{
+    left: 70% !important;
+}
+.time_emo4_img{
+    left: 100% !important;
+}
+.time_emo1_img img,.time_emo2_img img,.time_emo3_img img,.time_emo4_img img{
+    width: 100%;
+}
+
+.box9{
+    width: 100%;
+    /*height: 100vh;*/
+}
+.box9_con{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 100px;
+}
+.box9_con>div{
+    flex: 1;
+    position: relative;
+    cursor: pointer;
+}
+.box9_mark{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -60px;
+    border: 1px solid black;
+    padding: 10px;
+    font-family: "Inter", sans-serif;
+    font-weight: bold;
+    white-space: nowrap;
+    display: none;
+    border-radius: 5px;
+}
+.box9_con>div:hover .box9_mark{
+    display: block;
+}
+.box9_con img{
+    width: 100%;
+}
+.box9_con p{
+    text-align: center;
+    font-weight: bold;
+}
+.box10{
+    margin-top: 100px;
+}
+.box10_des{
+    text-align: center;
+    font-family: 14px;
+}
+.map{
+    width: 100%;
+}
+.map img{
+    width: 100%;
+    display: block;
+}
+area{
+    cursor: pointer;
+}
+.map_name{
+    width: 200px;
+    text-align: center;
+    padding: 20px 0;
+    font-family: "Inter", sans-serif;
+    background-color: white;
+    margin: 40px auto;
+    border-radius: 10px;
+    display: none;
+}
+.zone_list{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.zone_list>div{
+    width: 24%;
+}
+.zone_title{
+    font-size: 20px;
+    font-weight: bold;
+    font-family: "Inter", sans-serif;
+    display: inline-block;
+    padding: 5px 40px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+.co2_con{
+    width: 100%;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #e8e5f0;;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: auto;
+    gap: 5px;
+}
+
+.con2_n{
+    background-color: #f0f0f0 !important;
+}
+.con2_l{
+    background-color: #e2dfe7 !important;
+}
+.con2_m{
+    background-color: #b8b3cc !important;
+}
+.con2_h{
+    background-color: #8678a7 !important;
+}
+
+.lux_con{
+    width: 100%;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #E4DAC1;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: auto;
+    gap: 5px;
+}
+.spl_con{
+    width: 100%;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #E8E6D9;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: auto;
+    gap: 5px;
+}
+.pmv_con{
+    width: 100%;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #EBCFC4;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: auto;
+    gap: 5px;
+}
+
+.co2_con>div,.lux_con>div,.spl_con>div,.pmv_con>div{
+    height: 10px;
+     /* border: 1px solid black; */
+}
+
+.lux_n{
+    background-color: #fefbe9 !important;
+}
+.lux_l{
+    background-color: #fff3b0 !important;
+}
+.lux_m{
+    background-color: #f4c542 !important;
+}
+.lux_h{
+    background-color: #d89100 !important;
+}
+.spl_n{
+    background-color: #f0f5f8 !important;
+}
+.spl_l{
+    background-color: #c4d7f0 !important;
+}
+.spl_m{
+    background-color: #7faee0 !important;
+}
+.spl_h{
+    background-color: #3b77c4 !important;
+}
+.pmv_n{
+    background-color: #fceeee !important;
+}
+.pmv_l{
+    background-color: #f6c1c1 !important;
+}
+.pmv_m{
+    background-color: #ea8a8a !important;
+}
+.pmv_h{
+    background-color: #d64040 !important;
+}
+.map_text{
+    line-height: 2;
+}
+.box11_text{
+    line-height: 2;
+}
+.sm_title{
+    text-align: center;
+    margin-top: 6vw;
+}
+.gif_list{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.gif_list img{
+    width: 100%;
+    animation-play-state: paused;
+
+}
+.gif_list>div{
+    flex: 1;
+}

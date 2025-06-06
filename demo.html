@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Emotion, By Design</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <script src="js/d3.v7.min.js"></script>
+    <script src="js/echarts.min.js"></script>
+</head>
+<body>
+<div class="content">
+    <!-- Opening Section: Introduction -->
+    <div class="box1">
+        <h1 class="title">Emotion, By Design</h1>
+        <p class="box1_des"><i>It's not just you — the space is shaping your feelings.</i></p>
+        <p> By <b>Ziyu Zhang</b></p>
+    </div>
+    <div class="box2">
+        <div class="sm_box">
+            <p>
+                You thought it was just a space — neutral, silent, passive.
+            </p>
+            <p>
+                But what if the walls, the air, the lights around you were silently tuning your mind, moment by moment?
+            </p>
+            <p>
+                This isn’t a design fiction. It’s happening now — in classrooms, in offices, in your living room. The
+                invisible patterns of your environment are quietly scripting your emotions.
+            </p>
+            <br>
+            <br>
+            <p>
+                <b>We should treat emotional design in environmental variables as seriously as we treat concrete.</b>
+            </p>
+        </div>
+    </div>
+    <!-- Part 0: What is Invisible Space? -->
+    <div class="line">
+        <div class="line_left"></div>
+        <p class="line_center">What Even Is "Invisible Space"?</p>
+        <div class="line_right"></div>
+    </div>
+    <div class="box3">
+        <div class="sm_box">
+            <p>Invisible space isn’t empty. It’s full of influence.</p>
+            <p>Light levels. Air movement. Subtle sounds. They shape how we feel, how we behave, even how we think.</p>
+            <p>Most people never notice. And that’s the power of it. If you can’t see it — you can’t resist it. But once
+                you do see it, you start to feel it.</p>
+
+            <p class="sm_text">Hover to reveal what your space might be doing to you.</p>
+            <!-- A list of cards, each card represents a variable -->
+            <div class="card_list">
+                <div class="card">
+                    <div class="flip-card-front">
+                        <p>
+                            It’s completely silent — and still draining you.
+                        </p>
+                    </div>
+                    <div class="flip-card-back">
+                        <p>
+                            <b>CO₂</b> buildup makes you drowsy, dulls your attention, and slows mental performance —
+                            all without a
+                            sound. Stale air silently suffocates your focus, even when everything seems still.
+                        </p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="flip-card-front">
+                        <p>
+                            You think it’s quiet. But your body disagrees.
+                        </p>
+                    </div>
+                    <div class="flip-card-back">
+                        <p>
+                            <b>SOUND</b> levels above 45 dB trigger micro-stress, even if you’ve stopped noticing them.
+                            Your body stays alert, your mind keeps bracing. Fatigue follows.
+                        </p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="flip-card-front">
+                        <p>
+                            Your body isn’t complaining — it’s whispering.
+                        </p>
+                    </div>
+                    <div class="flip-card-back">
+                        <p>
+                            <b>TEMPERATURE</b> mismatches — even when subtle — make you fidget, lose focus, and feel
+                            uneasy. You may not say “it’s too warm,” but your body already knows.
+                        </p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="flip-card-front">
+                        <p>
+                            Too much of a good thing can make you tired.
+                        </p>
+                    </div>
+                    <div class="flip-card-back">
+                        <p>
+                            <b>LUX</b> — high levels energise, but excessive brightness overwhelms the senses. Light
+                            designed to help you work might also prevent you from winding down.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <p>These aren’t just environmental details — they are emotional levers.</p>
+            <p>Once you see them, you start to feel them.</p>
+        </div>
+    </div>
+
+    <div class="line">
+        <div class="line_left"></div>
+        <p class="line_center">How Do These Variables Feel?</p>
+        <div class="line_right"></div>
+    </div>
+    <div class="box4">
+        <div class="sm_box">
+            <p>
+                These invisible forces don’t just change the air — they change you.
+            </p>
+            <p>
+                Now that you know what they are, let’s see what emotions they trigger.
+            </p>
+            <p>
+                This next section shows how certain combinations can tip your mood, sometimes without you even noticing.
+            </p>
+            <br>
+            <br>
+            <p class="sm_text">Swipe left to see more →</p>
+            <div class="box4_card_list">
+                <div>
+                    <div>
+                        <div class="box4_card_left">
+                            <img src="./images/Overwhelmed.png" alt="">
+                            <p>“It’s too much...”</p>
+                        </div>
+                        <div class="box4_card_right">
+                            <h2>Overwhelmed</h2>
+                            <p>
+                                You feel overstimulated — the room is too loud, too bright, too stuffy.
+                            </p>
+                            <div class="tags">
+                                <span>CO₂ > 800 ppm</span>
+                                <span>SPL > 50 dB</span>
+                                <span>Lux > 700</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="box4_card_left">
+                            <img src="./images/Detached.png" alt="">
+                            <p>“I’m here, but not really.”</p>
+                        </div>
+                        <div class="box4_card_right">
+                            <h2>Detached</h2>
+                            <p>
+                                You feel disconnected — everything feels dull, like you’re not really there.
+                            </p>
+                            <div class="tags">
+                                <span>CO₂ > 850 ppm</span>
+                                <span>SPL < 35</span>
+                                <span>Lux < 200</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="box4_card_left">
+                            <img src="./images/Stagnant.png" alt="">
+                            <p>“Nothing’s moving, not even me.”</p>
+                        </div>
+                        <div class="box4_card_right">
+                            <h2>Stagnant</h2>
+                            <p>
+                                You feel stuck — the air is heavy, and it’s hard to think.
+                            </p>
+                            <div class="tags">
+                                <span>CO₂ > 900 ppm</span>
+                                <span>Airflow = Low</span>
+                                <span>PMV < 0.5</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="box4_card_left">
+                            <img src="./images/Balanced.png" alt="">
+                            <p>“This feels just right.”</p>
+                        </div>
+                        <div class="box4_card_right">
+                            <h2>Balanced</h2>
+                            <p>
+                                You feel calm and focused — fresh air, gentle light, clear thoughts.
+                            </p>
+                            <div class="tags">
+                                <span>CO₂ < 600 ppm</span>
+                                <span>SPL < 45 dB</span>
+                                <span>400 < Lux < 600</span>
+                                <span>PMV ≈ 0</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="box4_card_left">
+                            <img src="./images/Irritated.png" alt="">
+                            <p>“Something keeps poking at me.”</p>
+                        </div>
+                        <div class="box4_card_right">
+                            <h2>Irritated</h2>
+                            <p>
+                                You feel uneasy — small disruptions keep pulling at your nerves.
+                            </p>
+                            <div class="tags">
+                                <span>650 < CO₂ < 800 ppm</span>
+                                <span>Lux > 800</span>
+                                <span>SPL < 50</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="line">
+        <div class="line_left"></div>
+        <p class="line_center">The Research Behind the Mood</p>
+        <div class="line_right"></div>
+    </div>
+    <div class="box5">
+        <div class="sm_box">
+            <p>These emotional responses aren’t imagined — they’re measurable.</p>
+            <p>For decades, scientists and building standards have warned us that poor air quality, unbalanced lighting,
+                disruptive noise, and thermal discomfort can significantly affect how we feel, think, and function.</p>
+            <p>What you see throughout this site — the changes in mood, the color of boxes, the emotional rhythms — are
+                not just speculative. They are drawn directly from how the body responds to its surroundings.</p>
+            <p>Below are four studies that informed our interpretation.</p>
+             <p class="sm_text">Hover to reveal key findings from each study.</p>
+        </div>
+        <!-- Show evidence of scientific support (hover to show research conclusions) -->
+        <div class="box5_img_con">
+            <div class="box5_img">
+                <div>
+                    <img src="images/co2.png"/>
+                    <div class="box5_mark">
+                        <p>
+                            This study found that even moderate increases in indoor CO₂ levels — starting at around 800
+                            to 1,000 ppm — can significantly reduce decision-making performance.
+                        </p>
+                    </div>
+                </div>
+                <div>
+                    <img src="images/lux.png"/>
+                    <div class="box5_mark">
+                        <p>
+                            This cross-cultural study demonstrated that lighting intensity and color strongly affect
+                            psychological mood in indoor environments.
+                        </p>
+                    </div>
+                </div>
+                <div><img src="images/noise.png"/>
+                    <div class="box5_mark">
+                        <p>
+                            This research showed that noise exposure in open-plan offices increases stress hormone
+                            levels and reduces task performance.
+                        </p>
+                    </div>
+                </div>
+                <div><img src="images/PMV.png"/>
+                    <div class="box5_mark">
+                        <p>
+                            This standard defines the optimal range for thermal comfort — typically within a PMV value
+                            of -0.5 to +0.5.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <br>
+            <p>
+                These emotional states are illustrative, not definitive.
+            </p>
+            <p>
+                They’re based on real data, interpreted through environmental comfort models.
+            </p>
+            <p>
+                Our goal isn’t to tell you exactly how you feel—but to show how
+                space might be part of the story.
+            </p>
+        </div>
+    </div>
+
+    <!-- Part 1: Rhythm Mismatch -->
+    <div class="line">
+        <div class="line_left"></div>
+        <p class="line_center">When Rhythms Don’t Align</p>
+        <div class="line_right"></div>
+    </div>
+
+
+    <div class="box6">
+        <div class="sm_box">
+            <!-- Horizontal auto-playing image carousel implemented with Swiper -->
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="images/clock_8am.png"/></div>
+                    <div class="swiper-slide"><img src="images/clock_9am.png"/></div>
+                    <div class="swiper-slide"><img src="images/clock_10am.png"/></div>
+                    <div class="swiper-slide"><img src="images/clock_1pm.png"/></div>
+                    <div class="swiper-slide"><img src="images/clock_3pm.png"/></div>
+                    <div class="swiper-slide"><img src="images/clock_4pm.png"/></div>
+                    <div class="swiper-slide"><img src="images/clock_6pm.png"/></div>
+                    <div class="swiper-slide"><img src="images/clock_7pm.png"/></div>
+                    <div class="swiper-slide"><img src="images/clock_8pm.png"/></div>
+        
+                </div>
+            </div>
+            <br>
+            <br>
+            <p>
+                Our bodies follow a natural rhythm—but our spaces often don’t. We thrive when our environment flows with us: clarity in the morning, calm in the afternoon, and dimness at night. When light stays too bright, or CO₂ and noise levels peak at the wrong time, even subtle mismatches can disrupt our focus and mood. This section visualizes that misalignment using a "Mismatch Score"—a simple way to show how far a space strays from what your body expects at each hour.
+            </p>
+            
+        </div>
+    </div>
+
+    <!-- Chart display: Ideal rhythm line and comparison lines for two zones -->
+    <div class="char">
+        <div id="canva"></div>
+         <!-- Three explanatory info blocks with buttons -->
+        <div class="line_con">
+            <div class="line_btn1">
+                <p class="line_con_title">
+                    <b>Your body already knows the rhythm.</b>
+                </p>
+                <br>
+                <p>
+                    Just like sunlight fades and our mind calms, our body
+                    thrives on subtle daily patterns — alert in the morning, relaxed at night. This black line shows
+                    the ideal rhythm your body expects.
+                </p>
+            </div>
+            <div class="line_btn2">
+                <p class="line_con_title">
+                    <b>Some zones ignore your rhythm completely.</b>
+                </p>
+                <br>
+                <p>
+                    Zone 243 stays constantly high across the day —
+                    meaning persistent mismatch. Maybe the air is stale, the noise level is too high, or the
+                    lighting never softens. This isn’t just uncomfortable — it can be emotionally exhausting.
+                </p>
+            </div>
+            <div class="line_btn3">
+                <p class="line_con_title">
+                    <b>Mismatch isn’t always what you think.</b>
+                </p>
+                <br>
+                <p>
+                    Zone 27 dips dramatically in the middle of the day — just
+                    when you’re supposed to feel most alert. It’s not that your energy dropped. It’s that the
+                    environment failed to support it.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="box7">
+        <div class="sm_box">
+            <p>
+                While each emotion is linked to specific environmental values (like CO₂, Lux, SPL), misaligned rhythms
+                alone can also trigger these feelings. Even when average conditions seem “normal,” the way these
+                variables fluctuate throughout the day — either too fast, too slow, or too flat — can deeply affect how
+                we feel.
+            </p>
+            <br>
+            <br>
+            <div class="emo_list">
+                <div class="emo_con">
+                    <div class="emo_con_img"><img src="images/Overwhelmed.png"/></div>
+                    <div class="emo_con_right emo_con_right_1">
+                        <p>Sudden and frequent spikes in environmental rhythm create overstimulation.</p>
+                    </div>
+                </div>
+                <div class="emo_con">
+                    <div class="emo_con_img"><img src="images/Detached.png"/></div>
+                    <div class="emo_con_right emo_con_right_2">
+                        <p>Flat, unchanging rhythms disconnect people from their surroundings.</p>
+                    </div>
+                </div>
+
+                <div class="emo_con">
+                    <div class="emo_con_img"><img src="images/Stagnant.png"/></div>
+                    <div class="emo_con_right emo_con_right_3">
+                        <p>Long hours of low activity and no rhythm cause emotional numbness.</p>
+                    </div>
+                </div>
+
+                <div class="emo_con">
+                    <div class="emo_con_img"><img src="images/Balanced.png"/></div>
+                    <div class="emo_con_right emo_con_right_4">
+                        <p>Natural, moderate rhythms support emotional stability and focus.</p>
+                    </div>
+                </div>
+
+                <div class="emo_con">
+                    <div class="emo_con_img"><img src="images/Irritated.png"/></div>
+                    <div class="emo_con_right emo_con_right_5">
+                        <p>Slight but constant fluctuations prevent the body from settling.</p>
+                    </div>
+                </div>
+
+            </div>
+            <br>
+            <br>
+            <p>But what if it doesn’t take a big mismatch</p>
+            <p>Even a tiny change — just a few decibels or a shift in lighting — might be enough to flip how you
+                feel.</p>
+        </div>
+    </div>
+
+    <!-- Part 2: Minor Shift, Big Mood -->
+    <div class="line">
+        <div class="line_left"></div>
+        <p class="line_center">Minor Shift, Big Mood</p>
+        <div class="line_right"></div>
+    </div>
+    <!-- Shows how small environmental changes trigger emotional shifts (by comparing different zones) -->
+    <div class="box8">
+        <div class="sm_box">
+            <p>
+                What if a big feeling came from something barely noticeable?
+            </p>
+        
+            <p>In this section, you’re not looking at numbers—you’re feeling the shift. Two spaces may seem the same, but one feels still, the other uneasy. It’s not about what changed. It’s about how you feel when it does.
+            </p>
+            <br>
+            <br>
+            <div class="time_emo">
+                <div class="time_emo1">
+                    <div class="time_emo1_img"><img src="images/Balanced.png" class="emo1_img"/></div>
+                </div>
+                <div class="time_emo2">
+                    <div class="time_emo2_img"><img src="images/Balanced.png" class="emo1_img"/></div>
+                </div>
+                <div class="time_center">
+                    <div class="time_center_active">8:00</div>
+                    <div>9:00</div>
+                    <div>10:00</div>
+                    <div>11:00</div>
+                    <div>12:00</div>
+                    <div>13:00</div>
+                    <div>14:00</div>
+                    <div>15:00</div>
+                    <div>16:00</div>
+                    <div>17:00</div>
+                    <div>18:00</div>
+                </div>
+                <div class="time_emo3">
+                    <div class="time_emo3_img"><img src="images/Balanced.png" class="emo1_img"/></div>
+                </div>
+                <div class="time_emo4">
+                    <div class="time_emo4_img"><img src="images/Balanced.png" class="emo1_img"/></div>
+                </div>
+            </div>
+            <div class="time_tag">
+                <div>
+                    <p>zone 31</p>
+                </div>
+                <div><p>zone 48</p></div>
+                <div class="time_tag_center">
+                    <p>29/08/2019</p>
+                </div>
+                <div>
+                    <p>zone 49</p>
+                </div>
+                <div>
+                    <p>zone 51</p>
+                </div>
+            </div>
+
+            <br>
+            <br>
+            <p>
+                This section doesn’t aim to dramatize sudden shifts, but to reveal subtle yet persistent patterns of emotional divergence across space. By visualising how different zones respond over a full day, it becomes clear that some environments maintain relative balance—while others exhibit quiet fluctuations that accumulate over time. The value of this section lies in its ability to surface these contrasts: it identifies where instability lingers, where comfort holds, and where emotional tone gradually shifts. Rather than isolating moments, it maps how rhythm and imbalance unfold—and persist—throughout the day.
+            </p>
+            
+        </div>
+    </div>
+      <!-- Part 3: A Map of the Invisible -->
+    <div class="line">
+        <div class="line_left"></div>
+        <p class="line_center">A Map of the Invisible</p>
+        <div class="line_right"></div>
+    </div>
+    <div class="box9">
+        <div class="sm_box">
+            <p>Most discomfort in indoor spaces comes not from what we see, but from what we don’t.
+            This section turns a year of invisible environmental rhythms into an emotional map. 
+            By counting outlier spikes in CO₂, light, noise, and thermal comfort across time, 
+            we identified patterns of disturbance in each zone. These patterns, not single moments, define the zone’s dominant emotion. </p>
+            <br>
+            <p class="sm_text">Hover over each character to learn what their emotion means.</p>
+            <!-- List zones and dates in sequential order -->
+            <div class="box9_con">
+                <div>
+                    <div class="box9_mark">Excessive spikes in both light and noise</div>
+                    <img src="images/Overwhelmed.png"/>
+                    <p>Overwhelmed</p>
+                </div>
+                <div>
+                    <div class="box9_mark">Rare variation, low stimulation throughout</div>
+                    <img src="images/Detached.png"/>
+                    <p>Detached</p>
+                </div>
+                <div>
+                    <div class="box9_mark">Long-term heat discomfort</div>
+                    <img src="images/Stagnant.png"/>
+                    <p>Stagnant</p>
+                </div>
+                <div>
+                    <div class="box9_mark">All variables remain stable most of the time</div>
+                    <img src="images/Balanced.png"/>
+                    <p>Balanced</p>
+                </div>
+                <div>
+                    <div class="box9_mark">Persistent noise imbalance </div>
+                    <img src="images/Irritated.png"/>
+                    <p>Irritated</p>
+                </div>
+                <div>
+                    <div class="box9_mark">No single pattern dominates, but irregularities persist</div>
+                    <img src="images/Unsettled.png"/>
+                    <p>Unsettled</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="box10">
+        <div class="sm_box">
+             <p class="sm_text">Click on any zone to reveal the hidden mood of that space.</p>
+            <div class="map">
+                <img src="images/map/start.png" usemap="#imgMap" class="map_img_src"/>
+                <!-- 
+                This section uses the HTML <map> tag with multiple <area> polygons to 
+                enable interactive clicks on the spatial layout.Each <area> represents 
+                a spatial zone (class names: map1 to map19). Click events are attached 
+                via querySelector in home.js, allowing the user to switch zone images and 
+                corresponding variable charts.The polygon coordinates are manually selected 
+                to match specific areas on the real floor plan.-->
+
+                <map name="imgMap">
+                    <area shape="poly" coords="697,149,764,198,919,163,920,129,855,120" class="map1"></area>
+                    <area shape="poly" coords="625,466,674,486,809,443,759,426" class="map2"></area>
+                    <area shape="poly" coords="417,461,459,450,512,469,574,449,656,479,544,514" class="map3"></area>
+                    <area shape="poly" coords="446,565,507,640,624,595,564,526" class="map4"></area>
+                    <area shape="poly" coords="442,376,514,441,725,376,659,320" class="map5"></area>
+                    <area shape="poly" coords="578,447,718,401,736,430,624,464" class="map6"></area>
+                    <area shape="poly" coords="356,565,431,449,493,526,412,592" class="map7"></area>
+                    <area shape="poly" coords="569,526,630,553,625,593,769,538,715,479" class="map8"></area>
+                    <area shape="poly" coords="430,121,563,144,563,184,675,161,575,107" class="map9"></area>
+                    <area shape="poly" coords="576,110,640,118,675,123,674,144,610,104" class="map10"></area>
+                    <area shape="poly" coords="286,483,283,529,344,559,384,512,416,493,357,466" class="map11"></area>
+                    <area shape="poly" coords="749,100,700,147,814,110" class="map12"></area>
+                    <area shape="poly" coords="281,325,662,247,335,342,332,378,282,361" class="map13"></area>
+                    <area shape="poly" coords="284,198,421,127,551,149,421,224" class="map14"></area>
+                    <area shape="poly" coords="485,355,576,339,701,307,613,286" class="map15"></area>
+                    <area shape="poly" coords="344,345,397,332,438,344,386,359,383,401,341,384" class="map16"></area>
+                    <area shape="poly" coords="666,257,738,326,817,301,818,254,744,238" class="map17"></area>
+                    <area shape="poly" coords="724,335,745,349,742,368,898,320,864,293" class="map18"></area>
+                    <area shape="poly" coords="462,208,527,250,719,208,658,169" class="map19"></area>
+                </map>
+                <div class="map_name"></div>
+
+                <div class="zone_list">
+                    <div class="co2">
+                        <div class="zone_title" style="background-color: #F4EDE7;">CO2</div>
+                        <div class="co2_con"></div>
+                    </div>
+                    <div class="lux">
+                        <div class="zone_title" style="background-color: #E4DAC1;">LUX</div>
+                        <div class="lux_con"></div>
+                    </div>
+                    <div class="spl">
+                        <div class="zone_title" style="background-color: #E8E6D9;">SPL</div>
+                        <div class="spl_con"></div>
+                    </div>
+                    <div class="pmv">
+                        <div class="zone_title" style="background-color: #EBCFC4;">PMV</div>
+                        <div class="pmv_con"></div>
+                    </div>
+                </div>
+
+                <p class="map_text">
+                    What you're seeing above isn’t just design — it’s a translation of a year’s worth of environmental instability 
+                    into rhythm. We divided the year into 100 equal chunks and tracked how often this zone exceeded comfort thresholds 
+                    — when CO₂ spiked, light was too harsh, noise got disruptive, or temperature felt wrong. Each block shows one time 
+                    chunk, and its color reflects spike frequency — the darker the block, the more unstable that period was.
+                </p>
+            </div>
+
+        </div>
+    </div>
+    <!-- Part 4: What Can We Do About It?  -->
+    <div class="line">
+        <div class="line_left"></div>
+        <p class="line_center">What Can We Do About It</p>
+        <div class="line_right"></div>
+    </div>
+
+    <div class="box11">
+        <div class="sm_box">
+            <p class="box11_text">
+                We don’t always get to choose our environments. Most of us can’t redesign our classrooms or office
+                lighting. But we can start noticing. And once we notice, we can shift what we can control. Whether
+                you're a designer, policymaker, or just someone trying to concentrate, this project is an invitation to
+                pay attention. Space isn’t neutral. Sometimes it shouts. Sometimes it whispers. And if we listen —
+                really listen — we can start to make changes that matter. Not all change has to be big. But awareness?
+                That’s always powerful.
+            </p>
+            
+            <div class="gif_list">
+                <div><img src="images/gif/Good Morning Coffee Sticker by CrossCountry Mortgage, LLC.gif"/></div>
+                <div><img src="images/gif/Plant Grow Sticker.gif"/></div>
+                <div><img src="images/gif/Riff Raff Music Notes Sticker by Riff Raff Sleep Toys.gif"/></div>
+                <div><img src="images/gif/See Through New Post Sticker.gif"/></div>
+                <div><img src="images/gif/Turn On Ah Ha Sticker by Alexandra Five.gif"/></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="./js/swiper-bundle.min.js"></script>
+<!-- Initialize Swiper -->
+<script>
+    var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        loop: true,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
+        autoplay: {
+            delay: 1000, // Switch to the next slide every 2500 milliseconds
+        },
+    });
+</script>
+<script src="js/home.js"></script>
+<script src="js/line.js"></script>
+
+</body>
+</html>
